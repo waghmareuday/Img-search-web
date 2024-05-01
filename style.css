@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #Search-input {
+    width: 60%;
+    padding: 10px;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0 ,0 ,0.2 );
+    border: 1px solid #ccc;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #Search-button {
+    padding: 10px 20px;
+    background-color: #138065;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0 ,0 ,0.2 );
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .search-result {
+    margin-bottom: 60px;
+    width: 30%; /* Adjust width as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .search-result:hover {
+    transform: translateY(-5px); /* Adjust the amount of translation as needed */
+  }
+  
+  .search-result img {
+    max-width: 100%;
+    object-fit: cover;
+    height:  70%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .search-result:hover img {
+    opacity: 0.8;
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .search-result a {
+    font-size: 20px;
+    display: block;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .search-result a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  #show-more-button{
+    background-color: #008cba;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px ;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px auto;
+    display: none;
+    
+  }
+  
+  /* Add animation to the image */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .search-result img {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  
+  @media screen and  (max-width:768px) {
+    .search-result{
+      width: 45%;
+    }
+  }
+  @media screen  and  (max-width: 480px){
+    .search-result{
+        width: 100%;
+    }
+
+
+  }
+    
+  
